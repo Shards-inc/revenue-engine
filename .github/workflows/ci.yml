@@ -10,9 +10,6 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
-      - name: Markdown Lint
-        uses: DavidAnson/github-actions-markdownlint@v1
-        with:
-          glob: "**/*.md"
-
+      uses: DavidAnson/markdownlint-cli2-action@v16
+     with:
+       globs: "**/*.md"
